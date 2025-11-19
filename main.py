@@ -155,7 +155,7 @@ def generar_horarios(limite=5):
     # PRE-SELECCIONAR PROFESORES Y EXPANDIR A BLOQUES
     # --------------------------------------------
 
-    duracion_bloque = 2 # Ajusta al valor real de tu sistema
+    duracion_bloque = 2 
     materias_pendientes = []
 
     for materia in materias_sem:
@@ -187,7 +187,6 @@ def generar_horarios(limite=5):
     unicas = []
     vistas = set()
     for sol in soluciones:
-        # Deduplicate classes within the solution just in case
         sol = list(set(sol))
         
         # Normalizamos la representación para comparar: ordenar por (materia, dia, inicio, fin, prof, salon)
